@@ -35,6 +35,17 @@ pipeline{
                 sh "docker push clickoncloudkubernets/maven-app:${DOCKER_TAG} "
             }
         }
+		
+        stage('Deploy to Kubernets'){
+            steps{
+                sh "export KUBECONFIG=kubernets/admin.conf"
+				sh "kubectl get nodes"
+            }
+        }		
+		
+		
+		
+		
     }     
 
 }
