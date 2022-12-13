@@ -20,6 +20,8 @@ spec:
       labels:
         app: maven-app
     spec:
+      nodeSelector: 
+        type: staging    
       imagePullSecrets:
         - name: my-docker-account-secret    
       containers:
