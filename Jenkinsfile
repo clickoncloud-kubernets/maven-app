@@ -35,7 +35,7 @@ pipeline{
                 sh "docker push clickoncloudkubernets/maven-app:${DOCKER_TAG} "
             }
         }
-        
+    }     
 
 }
 
