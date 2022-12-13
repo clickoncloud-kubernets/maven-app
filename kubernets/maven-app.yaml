@@ -27,8 +27,8 @@ spec:
         image: clickoncloudkubernets/maven-app:DOCKER_TAG_REPLACE
         resources:
           limits:
-            memory: "512Mi"
-            cpu: "1000m"
+            memory: "128Mi"
+            cpu: "500m"
         ports:
         - containerPort: 8080
 ---
