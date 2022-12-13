@@ -38,8 +38,9 @@ pipeline{
 		
         stage('Deploy to Kubernets'){
             steps{
-                sh "export KUBECONFIG=kubernets/admin.conf"
-				sh "kubectl get nodes"
+                sh "cp -i kubernets/admin.conf $HOME/.kube/config"
+		sh "chown $(id -u):$(id -g) $HOME/.kube/config"
+		sh "kubectl get nodes"    
             }
         }		
 		
