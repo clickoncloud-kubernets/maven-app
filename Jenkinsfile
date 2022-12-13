@@ -32,16 +32,11 @@ pipeline{
                     sh "docker login -u soumenbiswas212 -p ${dockerHubPwd}"
                 }
                 
-                sh "docker push kammana/hariapp:${DOCKER_TAG} "
+                sh "docker push clickoncloudkubernets/maven-app:${DOCKER_TAG} "
             }
         }
         
-//         stage('Docker Deploy'){
-//             steps{
-//               ansiblePlaybook credentialsId: 'dev-server', disableHostKeyChecking: true, extras: "-e DOCKER_TAG=${DOCKER_TAG}", installation: 'ansible', inventory: 'dev.inv', playbook: 'deploy-docker.yml'
-//             }
-//         }
-    }
+
 }
 
 def getVersion(){
