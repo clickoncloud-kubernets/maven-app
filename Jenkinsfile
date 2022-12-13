@@ -36,7 +36,7 @@ pipeline{
             }
         }
 		
-        stage('Deploy to Kubernets'){
+        stage('Connect Kubernets'){
             steps{
                 sh "cp -i kubernets/admin.conf $HOME/.kube/config"
 		sh "chown jenkins:jenkins $HOME/.kube/config"
