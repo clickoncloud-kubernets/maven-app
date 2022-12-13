@@ -43,7 +43,12 @@ pipeline{
 		sh "kubectl get nodes"    
             }
         }		
-		
+
+        stage('Deploy Kubernets'){
+            steps{
+                sh "kubectl apply -f maven-app.yaml"  
+            }
+        }	    
 		
 		
 		
