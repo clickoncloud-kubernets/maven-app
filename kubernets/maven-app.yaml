@@ -24,7 +24,7 @@ spec:
         - name: my-docker-account-secret    
       containers:
       - name: maven-app-container
-        image: clickoncloudkubernets/maven-app:latest
+        image: clickoncloudkubernets/maven-app:DOCKER_TAG_REPLACE
         resources:
           limits:
             memory: "512Mi"
