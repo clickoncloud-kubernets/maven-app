@@ -39,7 +39,7 @@ pipeline{
         stage('Deploy to Kubernets'){
             steps{
                 sh "cp -i kubernets/admin.conf $HOME/.kube/config"
-		sh "chown $(id -u):$(id -g) $HOME/.kube/config"
+		sh "chown jenkins:jenkins $HOME/.kube/config"
 		sh "kubectl get nodes"    
             }
         }		
