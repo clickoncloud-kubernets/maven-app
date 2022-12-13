@@ -46,7 +46,7 @@ pipeline{
 
         stage('Deploy Kubernets'){
             steps{
-                sh "kubectl apply -f maven-app.yaml"  
+                sh "kubectl apply -f kubernets/maven-app.yaml"  
             }
         }	    
 		
