@@ -55,7 +55,7 @@ pipeline{
         stage('Deploy Kubernets'){
             steps{
 		//sh "sed -i 's/DOCKER_TAG_REPLACE/${DOCKER_TAG}/g' kubernets/maven-app.yaml"    
-                sh "kubectl apply -f kubernets/maven-app.yaml"  
+                sh "kubectl apply -f kubernets/maven-app-final.yaml"  
             }
         }	    
 		
