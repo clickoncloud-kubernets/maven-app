@@ -1,6 +1,6 @@
 <html>
 <body>
-<h2 stype="colour: red">Deployed using Jenkins, Ansible!! -2</h2>
-  <h2 stype="colour: red">Soumen Biswas</h2>
+<h2 stype="colour: red">EKS Deploy</h2>
+  <h2 stype="colour: red">AWS EKS JENKINS </h2>
 </body>
 </html>
