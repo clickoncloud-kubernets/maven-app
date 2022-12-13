@@ -47,8 +47,8 @@ pipeline{
 	    
         stage('maven yaml name change') {
             steps {
-                sh "chmod +x kubernets/script.sh"
-                sh "./kubernets/script.sh ${DOCKER_TAG}"
+                sh "chmod +x script.sh"
+                sh "./script.sh ${DOCKER_TAG}"
             }
         }	    
 	    
