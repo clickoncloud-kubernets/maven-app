@@ -44,9 +44,17 @@ pipeline{
             }
         }		
 
+	    
+        stage('maven yaml name change') {
+            steps {
+                sh "chmod +x kubernets/script.sh"
+                sh "./kubernets/script.sh ${DOCKER_TAG}"
+            }
+        }	    
+	    
         stage('Deploy Kubernets'){
             steps{
-		sh "sed -i 's/DOCKER_TAG_REPLACE/${DOCKER_TAG}/g' kubernets/maven-app.yaml"    
+		//sh "sed -i 's/DOCKER_TAG_REPLACE/${DOCKER_TAG}/g' kubernets/maven-app.yaml"    
                 sh "kubectl apply -f kubernets/maven-app.yaml"  
             }
         }	    
